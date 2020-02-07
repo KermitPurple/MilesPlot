@@ -15,12 +15,9 @@ def getr():
         except:
             print("Invalid Input")
 
-def getlist():
+def getlist(x, r):
     lst = []
-    x = [getx0()]
-    r = getr()
-    for i in range(50):
-        print(i, x[-1])
+    for i in range(100):
         lst.append(x[-1])
         x.append(getnextx(x[-1], r))
     return lst
@@ -44,8 +41,13 @@ def graphlist(lst):
 
 
 def main():
-    lst = getlist()
-    graphlist(lst)
+    i = 0.001
+    r = getr()
+    while i < 1:
+        print("\n",i)
+        lst = getlist([i],r)
+        graphlist(lst)
+        i += 0.001
 
 if __name__ == "__main__":
     main()

@@ -16,14 +16,20 @@ def getr():
             print("Invalid Input")
 
 def getlist():
+    lst = []
     x = [getx0()]
     r = getr()
     for i in range(50):
-        print(i, x[-1])
+        lst.append((i, x[-1]))
         x.append(getnextx(x[-1], r))
+    return lst
+
+def graphlist(lst):
+    pass
 
 def main():
-    getlist()
+    lst = getlist()
+    graphlist(lst)
 
 if __name__ == "__main__":
     main()

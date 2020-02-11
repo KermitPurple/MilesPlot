@@ -55,7 +55,7 @@ def main():
     i = 0.01
     r = getr()
     lstsize = 300
-    exportheaderdata(lstsize)
+    #exportheaderdata(lstsize)
     while i < 1:
         #print("\n",i)
         lst = getlist([i],r,lstsize)
